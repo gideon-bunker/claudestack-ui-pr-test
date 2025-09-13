@@ -1,0 +1,48 @@
+{
+  "version": "2.0.0",
+  "generated": "2025-01-18T12:00:00Z",
+  "project": "test-simple",
+  "source": "test.md",
+  "aiGenerated": true,
+  "agents": {
+    "planning": ["prd-analyzer"],
+    "implementation": ["backend-api-planning-agent-002"],
+    "totalAgents": 1
+  },
+  "phases": {
+    "core": {
+      "name": "Core Implementation",
+      "description": "Test file creation",
+      "tasks": [
+        {
+          "id": "test-api",
+          "slug": "test-api",
+          "title": "Create test API endpoint",
+          "description": "Create a simple test API endpoint to verify file creation",
+          "type": "code",
+          "dependencies": [],
+          "estimatedTime": "1h",
+          "priority": "high",
+          "agentHints": {
+            "agentProfileSlug": "backend-api-planning-agent-002"
+          },
+          "agent": "backend-api-planning-agent-002",
+          "files": ["app/api/test/route.ts"],
+          "aiGenerated": true,
+          "generationType": "api",
+          "stages": [
+            { "name": "generation", "description": "Generate code" }
+          ]
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "totalTasks": 1,
+    "estimatedDuration": "1 hour",
+    "includesTests": false,
+    "includesDocs": false,
+    "aiEnhanced": true,
+    "granularity": "medium"
+  }
+}
